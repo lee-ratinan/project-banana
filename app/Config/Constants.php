@@ -77,3 +77,15 @@ defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+
+/*
+ * --------------------------------------------------------------------------
+ * Self-defined
+ * --------------------------------------------------------------------------
+ */
+
+defined('HTTP_RESPONSE_NOT_AUTHORIZED') || define('HTTP_RESPONSE_NOT_AUTHORIZED', 401);
+defined('HTTP_RESPONSE_FORBIDDEN') || define('HTTP_RESPONSE_FORBIDDEN', 403);
+defined('HTTP_RESPONSE_NOT_FOUND') || define('HTTP_RESPONSE_NOT_FOUND', 404);
+defined('HTTP_RESPONSE_METHOD_NOT_ALLOWED') || define('HTTP_RESPONSE_METHOD_NOT_ALLOWED', 405);
