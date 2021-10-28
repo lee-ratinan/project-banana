@@ -32,9 +32,22 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-// HOME PAGE
+// HOME CONTROLLER
 $routes->get('/', 'Home::index');
 $routes->get('{locale}', 'Home::index');
+
+// LOG IN/OUT AND SIMILAR PAGES/REQUESTS
+$routes->get('{locale}/login', 'Home::login');
+$routes->post('{locale}/login', 'Home::login_do');
+$routes->post('{locale}/logout', 'Home::logout_do');
+$routes->post('{locale}/forget_password', 'Home::forget_password_do');
+$routes->post('{locale}/register', 'Home::register_do');
+$routes->get('{locale}/reset_password', 'Home::reset_password');
+$routes->post('{locale}/reset_password', 'Home::reset_password_do');
+
+// GENERIC PAGES
+$routes->get('{locale}/(:segment)', 'Home::page/$1');
+$routes->get('{locale}/(:segment)/(:segment)', 'Home::page/$1/$2');
 
 /*
  * --------------------------------------------------------------------
