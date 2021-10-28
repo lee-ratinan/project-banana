@@ -9,6 +9,7 @@ class Home extends BaseController {
      * Check settings table, key: homepage for the action to do.
      * - 'STATIC': Show static home page
      * - 'BLOG': Show the blog page
+     * - 'PAGE': Show the page from DB
      */
     public function index()
     {
