@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class UserAccessGroupsModel extends Model {
 
-    protected $table = 'user_access_groups';
+    protected $table = 'bnn_user_access_groups';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = TRUE;
     protected $returnType = 'array';

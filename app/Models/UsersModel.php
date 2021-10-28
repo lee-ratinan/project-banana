@@ -6,7 +6,21 @@ use CodeIgniter\Model;
 
 class UsersModel extends Model {
 
-    protected $table = 'users';
+    const USERNAME_TYPE_EMAIL = 'EMAIL';
+    const USERNAME_TYPE_TELEPHONE = 'TELEPHONE';
+    const USERNAME_TYPE_ANY = 'ANY';
+
+    const USER_STATUS_PENDING_APPROVAL = 'PENDING_APPROVAL';
+    const USER_STATUS_ACTIVE = 'ACTIVE';
+    const USER_STATUS_SUSPENDED = 'SUSPENDED';
+
+    const USER_TYPE_PUBLIC_USER = 'PUBLIC_USER';
+    const USER_TYPE_ADMIN = 'ADMIN';
+    const USER_TYPE_SUPER_ADMIN = 'SUPER_ADMIN';
+
+    const USER_PASSWORD_HASH = 'SHA256';
+
+    protected $table = 'bnn_users';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = TRUE;
     protected $returnType = 'array';

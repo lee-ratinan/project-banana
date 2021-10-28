@@ -9,7 +9,7 @@ class SettingsModel extends Model {
     const STATUS_ACTIVE = 'ACTIVE';
     const STATUS_DELETED = 'DELETED';
 
-    protected $table = 'settings';
+    protected $table = 'bnn_settings';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = TRUE;
     protected $returnType = 'array';
