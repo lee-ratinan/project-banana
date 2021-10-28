@@ -40,10 +40,10 @@ class MockAppConfig extends App
 
     public $CSPEnabled = false;
 
-    public $defaultLocale    = 'en';
+    public $defaultLocale    = 'en-US';
     public $negotiateLocale  = false;
     public $supportedLocales = [
-        'en',
-        'es',
+        'en-US',
+        'th-TH',
     ];
 }
