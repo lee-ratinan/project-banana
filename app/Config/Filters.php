@@ -2,6 +2,9 @@
 
 namespace Config;
 
+use App\Filters\LocaleFilter;
+use App\Filters\SessionApiFilter;
+use App\Filters\SessionFilter;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -19,6 +22,8 @@ class Filters extends BaseConfig
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
+        'session'  => SessionFilter::class,
+        'sessionapi'  => SessionApiFilter::class
     ];
 
     /**
