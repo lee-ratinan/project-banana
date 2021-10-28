@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
-{
+class Home extends BaseController {
+
     /**
      * This is the home page
      * Check settings table, key: homepage for the action to do.
@@ -12,7 +12,18 @@ class Home extends BaseController
      */
     public function index()
     {
-        echo 'HOME PAGE';
+        $setting_model = new \App\Models\SettingsModel();
+        $home_page = $setting_model->getSettingValueByKey('homepage');
+        if ('static' == $home_page)
+        {
+            return view('homepage');
+        } else if ('blog' == $home_page)
+        {
+            echo 'go to blog';
+        } else if ('page' == $home_page)
+        {
+            echo 'query the page';
+        }
     }
 
     public function login()
