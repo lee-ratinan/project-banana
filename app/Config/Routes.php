@@ -35,6 +35,9 @@ $routes->setAutoRoute(TRUE);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+// ADMIN
+$routes->get('admin', 'Admin::dashboard');
+
 // HOME CONTROLLER
 $routes->get('/', 'Home::index');
 $routes->get('{locale}', 'Home::index');
