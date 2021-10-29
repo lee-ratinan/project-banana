@@ -37,6 +37,9 @@ $routes->setAutoRoute(TRUE);
 
 // ADMIN
 $routes->get('admin', 'Admin::dashboard');
+$routes->get('admin/(:segment)', 'Admin::$1');
+$routes->get('admin/(:segment)/(:segment)', 'Admin::$1/$2');
+$routes->get('admin/(:segment)/(:segment)/(:segment)', 'Admin::$1/$2/$3');
 
 // HOME CONTROLLER
 $routes->get('/', 'Home::index');
