@@ -22,7 +22,12 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(TRUE);
 $routes->set404Override(function () {
-    echo view('_error_404');
+    $data['siteInfo'] = config('Banana');
+    $data['locale'] = 'en-US';
+    $data['pageSlug'] = '404';
+    $data['pageTitle'] = '404';
+    $data['pageDescription'] = 'This page cannot be found.';
+    echo view('_error_404', $data);
 });
 $routes->setAutoRoute(TRUE);
 
