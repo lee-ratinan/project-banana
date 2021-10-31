@@ -41,7 +41,7 @@ class Home extends BaseController {
         $this->data['locale'] = service('request')->getLocale();
         if ( ! $this->checkLocaleFromUri())
         {
-            echo 'bad locale';
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
     }
 
@@ -58,7 +58,7 @@ class Home extends BaseController {
         $home_page = $this->data['siteInfo']->siteHomepageOption;
         if (Banana::HOMEPAGE_OPTION_STATIC == $home_page)
         {
-            //return view('homepage', $this->data);
+            return view('homepage', $this->data);
         } else if (Banana::HOMEPAGE_OPTION_BLOG == $home_page)
         {
             echo 'go to blog';

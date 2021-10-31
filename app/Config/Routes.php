@@ -27,6 +27,7 @@ $routes->set404Override(function () {
     $data['pageSlug'] = '404';
     $data['pageTitle'] = '404';
     $data['pageDescription'] = 'This page cannot be found.';
+    $this->response->setStatusCode(404, 'Page Not Found');
     echo view('_error_404', $data);
 });
 $routes->setAutoRoute(TRUE);
