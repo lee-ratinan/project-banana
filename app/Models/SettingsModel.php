@@ -17,10 +17,10 @@ class SettingsModel extends Model {
     protected $allowedFields = [
         'setting_key',
         'setting_value',
+        'key_status',
         'created_by',
         'updated_by',
         'deleted_by',
-        'key_status'
     ];
     protected $useTimestamps = TRUE;
     protected $createdField = 'created_at';
@@ -33,7 +33,7 @@ class SettingsModel extends Model {
      * @param bool $include_deleted_key A flag whether to check for setting status
      * @return string
      */
-    public function getSettingValueByKey($key, $include_deleted_key = FALSE)
+    public function getSettingValueByKey(string $key, $include_deleted_key = FALSE)
     {
         $this->where('setting_key', $key);
         if ( ! $include_deleted_key)
