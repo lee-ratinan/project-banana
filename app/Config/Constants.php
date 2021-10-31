@@ -85,7 +85,11 @@ defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest auto
  * --------------------------------------------------------------------------
  */
 
-defined('HTTP_RESPONSE_NOT_AUTHORIZED') || define('HTTP_RESPONSE_NOT_AUTHORIZED', 401);
-defined('HTTP_RESPONSE_FORBIDDEN') || define('HTTP_RESPONSE_FORBIDDEN', 403);
-defined('HTTP_RESPONSE_NOT_FOUND') || define('HTTP_RESPONSE_NOT_FOUND', 404);
+defined('HTTP_RESPONSE_NOT_AUTHORIZED')     || define('HTTP_RESPONSE_NOT_AUTHORIZED', 401);
+defined('HTTP_RESPONSE_FORBIDDEN')          || define('HTTP_RESPONSE_FORBIDDEN', 403);
+defined('HTTP_RESPONSE_NOT_FOUND')          || define('HTTP_RESPONSE_NOT_FOUND', 404);
 defined('HTTP_RESPONSE_METHOD_NOT_ALLOWED') || define('HTTP_RESPONSE_METHOD_NOT_ALLOWED', 405);
+
+defined('FORMAT_DATE_MYSQL')                || define('FORMAT_DATE_MYSQL', 'Y-m-d');
+defined('FORMAT_TIME_MYSQL')                || define('FORMAT_TIME_MYSQL', 'H:i:s');
+defined('FORMAT_DATETIME_MYSQL')            || define('FORMAT_DATETIME_MYSQL', 'Y-m-d H:i:s');
