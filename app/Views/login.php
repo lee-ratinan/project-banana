@@ -2,7 +2,10 @@
 <?= $this->section('content') ?>
   <div class="row">
     <div class="col">
-      This is the home page.
+      <p>LOGIN</p>
+      <?php if ($siteInfo->userAllowPublicRegistration) : ?>
+        <p>SIGN UP FORM</p>
+      <?php endif; ?>
     </div>
   </div>
 <?= $this->endSection() ?>
